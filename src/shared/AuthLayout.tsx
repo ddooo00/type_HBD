@@ -30,9 +30,16 @@ const AuthLayout = () => {
     alert("TODO 요구사항에 맞추어 기능을 완성해주세요.");
 
     // TODO: "로그아웃 하시겠습니까?" confirm
+    const logOut = window.confirm("로그아웃 하시겠습니다?");
     // TODO: yes 선택 시, localStorage의 token과 email 제거
+    if (logOut) {
+      localStorage.removeItem("token");
+      localStorage.removeItem("emain");
+    }
     // TODO: "로그아웃이 완료되었습니다" alert
+    alert("로그아웃이 완료되었습니다.");
     // TODO: "/auth"로 이동
+    navigate("/auth");
   };
 
   return (
