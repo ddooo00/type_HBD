@@ -30,7 +30,7 @@ const AuthLayout = () => {
     // TODO: yes 선택 시, localStorage의 token과 email 제거
     if (logOut) {
       localStorage.removeItem("token");
-      localStorage.removeItem("emain");
+      localStorage.removeItem("email");
     }
     // TODO: "로그아웃이 완료되었습니다" alert
     alert("로그아웃이 완료되었습니다.");

@@ -6,8 +6,7 @@ import axios from "axios";
 const Main: React.FC<any> = () => {
   const [data, setData] = useState([]);
   const [contents, setContents] = useState<string>("");
-
-  const email = localStorage.getItem("email");
+  const [email, setEmail] = useState<string>("");
 
   const fetchData = async () => {
     try {
@@ -43,9 +42,10 @@ const Main: React.FC<any> = () => {
       );
       // TODO: 처리완료 후, reload를 이용하여 새로고침
       window.location.reload();
-    } catch (error) {}
-    // TODO: 네트워크 등 기타 문제인 경우, "일시적인 오류가 발생하였습니다. 고객센터로 연락주세요." alert
-    alert("일시적인 오류가 발생하였습니다. 고객센터로 연락주세요.");
+    } catch (error) {
+      // TODO: 네트워크 등 기타 문제인 경우, "일시적인 오류가 발생하였습니다. 고객센터로 연락주세요." alert
+      alert("일시적인 오류가 발생하였습니다. 고객센터로 연락주세요.");
+    }
   };
 
   const handleInputChange = (e: any) => {
@@ -69,7 +69,7 @@ const Main: React.FC<any> = () => {
               {index + 1}. {item.contents}
             </span>
             {/* // TODO: 로그인 한 user의 이메일과 일치하는 경우에만 삭제버튼 보이도록 제어 */}
-            <Button>삭제</Button>
+            {item.email === email && <Button>삭제</Button>}
           </ListItem>
         ))}
       </ListWrapper>
