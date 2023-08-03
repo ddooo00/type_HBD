@@ -10,11 +10,11 @@ const LoginForm: React.FC = () => {
 
   const handleLogin = async (values: any) => {
     // alert("TODO 요구사항에 맞추어 기능을 완성해주세요.");
-
+    const { email, password } = values;
     try {
       // TODO: email과 password를 DB에서 찾아서 로그인 검증
       const response = await axios.get(
-        `http://localhost:4000/users?email=${values.email}&password=${values.password}`
+        `http://localhost:4000/users?email=${email}&password=${password}`
       );
 
       if (response.data.length <= 0) {
@@ -28,8 +28,9 @@ const LoginForm: React.FC = () => {
 
         // TODO: 성공 시(2), localStorage에 token과 email을 저장
         // TODO: 성공 시(3), token은 shortId로 생성
-        localStorage.setItem("token", shortid.generate());
-        localStorage.setItem("email", values.email);
+        const token = shortid.generate();
+        localStorage.setItem("token", token);
+        localStorage.setItem("email", email);
 
         // TODO: 성공 시(4), "/" 라우터로 이동
         navigate("/");
