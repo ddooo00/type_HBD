@@ -20,8 +20,8 @@ const SignupForm: React.FC<any> = ({ setIsLogin }) => {
 
       // 회원가입 가능
       await axios.post("http://localhost:4000/users", {
-        email: email,
-        password: password,
+        email,
+        password,
       });
 
       // TODO: 성공 시(1), "회원가입이 성공적으로 처리되었습니다. 로그인 페이지로 이동합니다." alert
