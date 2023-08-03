@@ -8,8 +8,6 @@ const AuthLayout = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    alert("TODO 요구사항에 맞추어 기능을 완성해주세요.");
-
     // TODO: localStorage의 토큰 검색
     const Token = localStorage.getItem("token");
     // TODO: localStorage의 이메일 검색
@@ -27,8 +25,6 @@ const AuthLayout = () => {
   }, [navigate]);
 
   const handleLogoutButtonClick = () => {
-    alert("TODO 요구사항에 맞추어 기능을 완성해주세요.");
-
     // TODO: "로그아웃 하시겠습니까?" confirm
     const logOut = window.confirm("로그아웃 하시겠습니다?");
     // TODO: yes 선택 시, localStorage의 token과 email 제거

@@ -7,6 +7,8 @@ const Main: React.FC<any> = () => {
   const [data, setData] = useState([]);
   const [contents, setContents] = useState<string>("");
 
+  const email = localStorage.getItem("email");
+
   const fetchData = async () => {
     try {
       // TODO: 데이터베이스에서 boards 리스트 가져오기
@@ -39,12 +41,12 @@ const Main: React.FC<any> = () => {
       alert(
         "작성이 완료되었습니다. 아직 자동 새로고침이 불가하여 수동으로 갱신합니다."
       );
+      // TODO: 처리완료 후, reload를 이용하여 새로고침
+      window.location.reload();
     } catch (error) {}
     // TODO: 네트워크 등 기타 문제인 경우, "일시적인 오류가 발생하였습니다. 고객센터로 연락주세요." alert
     alert("일시적인 오류가 발생하였습니다. 고객센터로 연락주세요.");
   };
-  // TODO: 처리완료 후, reload를 이용하여 새로고침
-  window.location.reload();
 
   const handleInputChange = (e: any) => {
     setContents(e.target.value);
