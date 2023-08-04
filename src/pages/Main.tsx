@@ -33,6 +33,8 @@ const Main: React.FC<any> = () => {
     try {
       // TODO: 이메일과 contents를 이용하여 post 요청 등록(isDeleted 기본값은 false)
       await axios.post("http://localhost:4000/boards", {
+        // 이메일 가져오기
+        // email : localStorage.getItem('email')
         email,
         contents,
         isDeleted: false,
