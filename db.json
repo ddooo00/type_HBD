@@ -117,22 +117,10 @@
       "id": 9
     },
     {
-      "email": "",
+      "email": "s@s.com",
       "contents": "ssss",
       "isDeleted": false,
       "id": 10
-    },
-    {
-      "email": "",
-      "contents": "zzzzz",
-      "isDeleted": false,
-      "id": 11
-    },
-    {
-      "email": "",
-      "contents": "ggggggggggggggggggggggggg",
-      "isDeleted": false,
-      "id": 12
     }
   ]
 }
