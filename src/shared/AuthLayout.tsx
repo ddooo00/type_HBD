@@ -15,13 +15,13 @@ const AuthLayout = () => {
     // TODO: 토큰 또는 이메일 중 하나라도 없을 경우 "토큰 또는 이메일이 없습니다. 로그인해주세요." alert
     if (!Token || !Email) {
       alert("토큰 또는 이메일이 없습니다. 로그인해주세요.");
-    }
+      // TODO: localStorage에 있는 token, email을 제거
+      localStorage.removeItem("token");
+      localStorage.removeItem("email");
 
-    // TODO: localStorage에 있는 token, email을 제거
-    localStorage.removeItem("token");
-    localStorage.removeItem("email");
-    // TODO: "/auth"로 이동
-    navigate("/auth");
+      // TODO: "/auth"로 이동
+      navigate("/auth");
+    }
   }, [navigate]);
 
   const handleLogoutButtonClick = () => {

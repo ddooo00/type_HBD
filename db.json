@@ -49,6 +49,16 @@
       "email": "s@s.com",
       "password": "123456",
       "id": 10
+    },
+    {
+      "email": "1@1.com",
+      "password": "123456",
+      "id": 11
+    },
+    {
+      "email": "dud@a.com",
+      "password": "123456",
+      "id": 12
     }
   ],
   "boards": [
@@ -105,6 +115,24 @@
       "contents": "asdfasdf",
       "isDeleted": false,
       "id": 9
+    },
+    {
+      "email": "",
+      "contents": "ssss",
+      "isDeleted": false,
+      "id": 10
+    },
+    {
+      "email": "",
+      "contents": "zzzzz",
+      "isDeleted": false,
+      "id": 11
+    },
+    {
+      "email": "",
+      "contents": "ggggggggggggggggggggggggg",
+      "isDeleted": false,
+      "id": 12
     }
   ]
 }

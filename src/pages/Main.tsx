@@ -6,7 +6,8 @@ import axios from "axios";
 const Main: React.FC<any> = () => {
   const [data, setData] = useState([]);
   const [contents, setContents] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
+
+  const email = localStorage.getItem("email");
 
   const fetchData = async () => {
     try {
